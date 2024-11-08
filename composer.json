@@ -8,6 +8,7 @@
         "php": "^8.2",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "mongodb/builder": "^0.2",
         "mongodb/laravel-mongodb": "^5.1"
     },
     "require-dev": {

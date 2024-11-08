@@ -962,9 +962,6 @@
 
 
         async function titleAutocomplete(query) {
-            let search_params = JSON.stringify({
-                title: query,
-            })
 
 
             try {
@@ -978,13 +975,10 @@
 
 
         async function fetchMovies(query) {
-            let search_params = JSON.stringify({
-                title: query,
-            })
 
 
             try {
-                const response = await fetch(`/search/${encodeURIComponent(search_params)}`);
+                const response = await fetch(`/search/${encodeURIComponent(query)}`);
                 const movies = await response.json();
                 displayMovies(movies);
                 displayResults([])
