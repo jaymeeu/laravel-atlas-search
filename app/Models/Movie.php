@@ -14,7 +14,7 @@ class Movie extends Model
     {
         return self::aggregate()
             ->search([
-                'index' => 'movie_search',
+                'index' => 'default',
                 'compound' => [
                     'must' => [
                         [
@@ -36,7 +36,7 @@ class Movie extends Model
     {
         return self::aggregate()
             ->search([
-                'index' => 'movie_title_autocomplete',
+                'index' => 'movie_autocomplete',
                 'autocomplete' => [
                     'query' => $input,
                     'path' => 'title'
