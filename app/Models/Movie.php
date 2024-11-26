@@ -21,7 +21,7 @@ class Movie extends Model
                             'text' => [
                                 'query' => $input,
                                 'path' => 'title',
-                                'fuzzy' => new \stdClass() // Adding fuzzy matching
+                                'fuzzy' => ['maxEdits' => 2] // Adding fuzzy matching
                             ]
                         ]
                     ]
